@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.1.1",
+<<<<<<< HEAD
     "@material-ui/icons": "^4.2.0",
     "material-ui-dropzone": "^2.3.5",
+=======
+>>>>>>> b889cc7f0e121da62c223c3c803f3ef61d09c4ce
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
