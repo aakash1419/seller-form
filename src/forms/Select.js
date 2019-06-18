@@ -26,8 +26,11 @@ const useStyles = makeStyles(theme => ({
 export default function NativeSelects() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    age: '',
+    breed: '',
     name: 'hai',
+    colour: '',
+    kci: '',
+    sex: '',
   });
 
   const inputLabel = React.useRef(null);
@@ -49,10 +52,10 @@ export default function NativeSelects() {
         <InputLabel htmlFor="age-native-simple">Select Breed</InputLabel>
         <Select
           native
-          value={state.age}
-          onChange={handleChange('age')}
+          value={state.breed}
+          onChange={handleChange('breed')}
           inputProps={{
-            name: 'age',
+            name: 'breed',
             id: 'age-native-simple',
           }}
         >
@@ -74,22 +77,22 @@ export default function NativeSelects() {
         <InputLabel htmlFor="age-native-simple">Select Colour</InputLabel>
         <Select
           native
-          value={state.age}
-          onChange={handleChange('age')}
-          name="age"
+          value={state.colour}
+          onChange={handleChange('colour')}
+          name="colour"
           inputProps={{
             id: 'age-native-simple',
           }}
         >
           <option value="" />
-          <option value={11}>Black</option>
-          <option value={12}>White</option>
-          <option value={13}>Brown</option>
-          <option value={14}>Black Tan</option>
-          <option value={15}>Orange</option>
-          <option value={16}>Tri-Colour</option>
-          <option value={17}>Golden Brown</option>
-          <option value={18}>Other                  </option>
+          <option value={1}>Black</option>
+          <option value={2}>White</option>
+          <option value={3}>Brown</option>
+          <option value={4}>Black Tan</option>
+          <option value={5}>Orange</option>
+          <option value={6}>Tri-Colour</option>
+          <option value={7}>Golden Brown</option>
+          <option value={8}>Other                  </option>
         </Select>
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>
@@ -98,13 +101,13 @@ export default function NativeSelects() {
         </InputLabel>
         <Select
           native
-          value={state.age}
-          onChange={handleChange('age')}
+          value={state.kci}
+          onChange={handleChange('kci')}
           
         >
           <option value="" />
-          <option value={19}>Yes</option>
-          <option value={20}>No</option>
+          <option value={1}>Yes</option>
+          <option value={2}>No</option>
         </Select>
         <FormHelperText>Required</FormHelperText>
       </FormControl>
@@ -112,13 +115,13 @@ export default function NativeSelects() {
         <InputLabel htmlFor="filled-age-native-simple">Sex</InputLabel>
         <Select
           native
-          value={state.age}
-          onChange={handleChange('age')}
+          value={state.sex}
+          onChange={handleChange('sex')}
           
         >
           <option value="" />
-          <option value={21}>Male</option>
-          <option value={22}>Female</option>
+          <option value={1}>Male</option>
+          <option value={2}>Female</option>
         </Select>
         <FormHelperText>Required</FormHelperText>
       </FormControl>

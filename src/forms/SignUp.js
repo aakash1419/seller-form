@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Select from '@material-ui/core/Select';
 import NativeSelects from './Select';
+import DropzoneAreaExample from './dropzone';
 
 function MadeWithLove() {
   return (
@@ -30,7 +31,7 @@ function MadeWithLove() {
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.common.white,
+      backgroundColor: theme.palette.common.grey,
     },
   },
   paper: {
@@ -63,7 +64,7 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Petician
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -78,8 +79,8 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
-                autoFocus
+                label="No. of pups"
+                
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -88,7 +89,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="Age in months"
                 name="lastName"
                 autoComplete="lname"
               />
@@ -99,7 +100,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Your name"
                 name="email"
                 autoComplete="email"
               />
@@ -110,16 +111,19 @@ export default function SignUp() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="mobile no."
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
             </Grid>
+            <Grid>
+                {<DropzoneAreaExample />}
+            </Grid>
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="I declare on my behalf that above consent given about my pet is TRUE."
               />
             </Grid>
           </Grid>
@@ -130,7 +134,7 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            Register
           </Button>
           <Grid container justify="flex-end">
             <Grid item>

@@ -7,16 +7,20 @@ import {BrowserRouter, Link, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <div>
         <Link to={'/sell-form'}>
             <Button variant="contained" color="primary">
               Sell your Pet
             </Button>
         </Link>
+        </div>
         <Switch>
             <Route path={'/sell-form'} exact component={SignUp}></Route>
         </Switch>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 
